@@ -18,7 +18,7 @@ const Header = () => {
             <nav className="main-nav">
                 <Link to="/">Inicio</Link>
                 <Link to="/products">Productos</Link>
-                {/* Agrega aquí más links como Nosotros, Contacto, etc. */}
+                {/* Agregar aquí más links como Nosotros, Contacto, etc. */}
                 {user?.role === 'admin' && <Link to="/admin">Admin</Link>}
             </nav>
             <div className="header-actions">
