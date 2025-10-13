@@ -1,17 +1,21 @@
 // src/api/db.js
 
+// Productos
 const products = [
-    { id: 1, name: 'Roro Viper Ultimate', category: 'Mouse', price: 79.99, stock: 50, image: 'https://via.placeholder.com/400x300.png?text=Roro+Viper', description: 'Mouse inalámbrico ultraligero para gaming con sensor óptico de alta precisión.' },
-    { id: 2, name: 'Roro BlackWidow V4', category: 'Keyboard', price: 169.99, stock: 30, image: 'https://via.placeholder.com/400x300.png?text=Roro+Keyboard', description: 'Teclado mecánico con switches personalizables y retroiluminación RGB.' },
-    { id: 3, name: 'Roro Kraken V3', category: 'Headset', price: 99.99, stock: 45, image: 'https://via.placeholder.com/400x300.png?text=Roro+Headset', description: 'Auriculares con sonido envolvente 7.1 y micrófono con cancelación de ruido.' },
-    { id: 4, name: 'Roro Goliathus', category: 'Mousepad', price: 29.99, stock: 100, image: 'https://via.placeholder.com/400x300.png?text=Roro+Mousepad', description: 'Alfombrilla de tela optimizada para todo tipo de sensores y sensibilidades.' },
-    { id: 5, name: 'Roro Kiyo Pro', category: 'Webcam', price: 199.99, stock: 20, image: 'https://via.placeholder.com/400x300.png?text=Roro+Webcam', description: 'Webcam profesional con sensor de luz adaptable para streaming en alta definición.' },
-    { id: 6, name: 'Roro Huntsman Mini', category: 'Keyboard', price: 119.99, stock: 60, image: 'https://via.placeholder.com/400x300.png?text=Roro+Huntsman', description: 'Teclado 60% con switches ópticos para una respuesta ultrarrápida.' },
-    { id: 7, name: 'Roro DeathAdder V2', category: 'Mouse', price: 69.99, stock: 80, image: 'https://via.placeholder.com/400x300.png?text=Roro+DeathAdder', description: 'Diseño ergonómico icónico, ahora mejorado con un sensor de 20K DPI.' },
-    { id: 8, name: 'Roro Seiren Mini', category: 'Microphone', price: 49.99, stock: 70, image: 'https://via.placeholder.com/400x300.png?text=Roro+Seiren', description: 'Micrófono de condensador ultracompacto, ideal para streaming y podcasting.' },
-    { id: 9, name: 'Roro Iskur', category: 'Chair', price: 499.99, stock: 15, image: 'https://via.placeholder.com/400x300.png?text=Roro+Iskur', description: 'Silla gaming ergonómica con soporte lumbar integrado.' },
-    { id: 10, name: 'Roro Blade 15', category: 'Laptop', price: 2199.99, stock: 10, image: 'https://via.placeholder.com/400x300.png?text=Roro+Blade+15', description: 'Portátil gaming con pantalla de alta tasa de refresco y gráficos de última generación.' }
+    { id: 1, name: "Control Xbox", price: 59000, image: "/img/xbox.webp", description: "Control inalámbrico de Xbox con diseño ergonómico y vibración háptica." },
+    { id: 2, name: "Auriculares Logitech", price: 60000, image: "/img/logi.jpeg", description: "Auriculares Logitech con micrófono incorporado y sonido envolvente." },
+    { id: 3, name: "Escritorio Cougar", price: 150000, image: "/img/cougar.avif", description: "Escritorio gamer Cougar con superficie amplia y soporte para accesorios." },
+    { id: 4, name: "Teclado HyperX", price: 49990, image: "/img/teclado.jpg", description: "Teclado mecánico HyperX con retroiluminación RGB y switches precisos." },
+    { id: 5, name: "Mouse Glorious", price: 24990, image: "/img/glorious.jpg", description: "Mouse Glorious ultraligero con sensor de alta precisión y diseño perforado." },
+    { id: 6, name: "Monitor 24\"", price: 159990, image: "/img/monitor.jpg", description: "Monitor de 24 pulgadas Full HD con alta tasa de refresco y bordes delgados." },
+    { id: 7, name: "Silla Gamer", price: 89990, image: "/img/silla.jpg", description: "Silla gamer ergonómica con soporte lumbar y ajuste de altura reclinable." },
 ];
+
+// Formato moneda
+function money(x) {
+  return Intl.NumberFormat("es-CL", { style: "currency", currency: "CLP" }).format(x);
+}
+
 
 let users = [
     { id: 1, email: 'roro@duoc.cl', password: 'admin', role: 'admin' },
