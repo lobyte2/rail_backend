@@ -10,7 +10,6 @@ import { registerUser } from '../../api/db';
 import { AuthContext } from '../../context/AuthContext';
 import Label from '../atoms/Label';
 
-// Lista simplificada solo con las regiones de Chile
 const regionesDeChile = [
   "Arica y Parinacota", "Tarapacá", "Antofagasta", "Atacama", "Coquimbo",
   "Valparaíso", "Metropolitana de Santiago", "Libertador General Bernardo O'Higgins",
@@ -19,7 +18,6 @@ const regionesDeChile = [
 ];
 
 const RegisterPage = () => {
-    // Estados para los campos del formulario (sin comuna)
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -35,13 +33,17 @@ const RegisterPage = () => {
         e.preventDefault();
         setError('');
 
+        if (password.length < 5 || password.length > 15) {
+            setError('La contraseña debe tener entre 5 y 15 caracteres');
+            return;
+        }
+
         if (password !== confirmPassword) {
             setError('Las contraseñas no coinciden');
             return;
         }
-
+        
         try {
-            // Enviamos los datos sin la comuna
             const userData = { fullName, email, password, phone, region };
             const sessionData = await registerUser(userData);
             login(sessionData);
@@ -58,11 +60,15 @@ const RegisterPage = () => {
                 
                 <FormField label="NOMBRE COMPLETO" id="fullName" type="text" value={fullName} onChange={e => setFullName(e.target.value)} required />
                 <FormField label="CORREO" id="email" type="email" value={email} onChange={e => setEmail(e.target.value)} required />
+                
                 <FormField label="CONTRASEÑA" id="password" type="password" value={password} onChange={e => setPassword(e.target.value)} required />
+                <Text style={{ fontSize: '0.8em', color: '#6c757d', marginTop: '-10px', marginBottom: '10px' }}>
+                    Debe tener entre 5 y 15 caracteres.
+                </Text>
+
                 <FormField label="CONFIRMAR CONTRASEÑA" id="confirmPassword" type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} required />
                 <FormField label="TELÉFONO (opcional)" id="phone" type="tel" value={phone} onChange={e => setPhone(e.target.value)} />
                 
-                {/* Menú Desplegable de Región (simplificado) */}
                 <div style={{ marginBottom: '15px' }}>
                     <Label htmlFor="region">Seleccione la región</Label>
                     <select id="region" value={region} onChange={e => setRegion(e.target.value)} required className="input-field" style={{ width: '100%' }}>
@@ -70,8 +76,6 @@ const RegisterPage = () => {
                         {regionesDeChile.map(r => <option key={r} value={r}>{r}</option>)}
                     </select>
                 </div>
-
-            
 
                 {error && <Text style={{ color: 'red', textAlign: 'center' }}>{error}</Text>}
                 
