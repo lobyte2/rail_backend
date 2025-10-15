@@ -19,10 +19,15 @@ const LoginPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
+
+        if (password.length < 5 || password.length > 15) {
+            setError('La contraseña debe tener entre 5 y 15 caracteres.');
+            return;
+        }
+
         try {
             const userData = await loginUser({ email, password });
             login(userData);
-            // Redirige al admin al panel y al usuario a la página de productos
             navigate(userData.role === 'admin' ? '/admin' : '/products');
         } catch (err) {
             setError(err);
