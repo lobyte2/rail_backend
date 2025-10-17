@@ -23,10 +23,10 @@ const Header = () => {
             <nav className="main-nav">
                 <Link to="/">Inicio</Link>
                 <Link to="/products">Productos</Link>
+                <Link to="/blog">Blog</Link> {/* <-- AÑADE ESTE ENLACE */}
                 {user?.role === 'admin' && <Link to="/admin">Admin</Link>}
             </nav>
             <div className="header-actions">
-                {/* El div del buscador ha sido eliminado de aquí */}
                 <Link to="/cart" className="cart-link">
                     🛒 Carrito ({cartItemCount})
                 </Link>
