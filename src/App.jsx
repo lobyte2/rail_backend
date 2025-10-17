@@ -7,7 +7,6 @@ import ProductDetailPage from './components/pages/ProductDetailPage';
 import CartPage from './components/pages/CartPage';
 import LoginPage from './components/pages/LoginPage';
 import AdminPage from './components/pages/AdminPage';
-// ▼▼▼ 1. IMPORTA LA NUEVA PÁGINA ▼▼▼
 import RegisterPage from './components/pages/RegisterPage';
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/admin" element={<AdminPage />} />
-        {/* ▼▼▼ 2. AÑADE LA NUEVA RUTA ▼▼▼ */}
         <Route path="/register" element={<RegisterPage />} />
       </Routes>
     </Router>
