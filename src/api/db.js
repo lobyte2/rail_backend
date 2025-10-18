@@ -13,7 +13,7 @@ const products = [
     { id: 10, name: "Logitech G733", price: 125900, image: "/img/g733.png", description: "Auriculares Logitech G733 con sonido envolvente y micrófono desmontable."},
     { id: 11, name: "Almacenamiento SSD m.2", price: 69990, image: "/img/m.2.jpg", description: "Almacenamiento SSD m.2 de alta velocidad y gran capacidad."},
     { id: 12, name: "Fuente de poder EVGA", price: 150990, image: "/img/fuente.jpg", description: "Fuente de poder EVGA de alta eficiencia e alto rendimiento."},
-    { id: 13, name: "Tarjeta de video NVIDIA GeForce RTX 4060", price: 150990, image: "/img/4060.jpg", description: "Tarjeta de video NVIDIA GeForce RTX 4060 con 8GB de VRAM y soporte para Ray Tracing."},
+    { id: 13, name: "Tarjeta de video NVIDIA GeForce RTX 4060", price: 365000, image: "/img/4060.jpg", description: "Tarjeta de video NVIDIA GeForce RTX 4060 con 8GB de VRAM y soporte para Ray Tracing."},
     { id: 14, name: "Almacenamiento SSD Kingston 480 GB", price: 45000, image: "/img/ssd.jpg", description: "Almacenamiento SSD Kingston de alta velocidad y gran capacidad, facil de instalar."},
 ];
 
