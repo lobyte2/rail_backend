@@ -1,4 +1,3 @@
-// src/components/pages/RegistroPage.jsx
 import { useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import MainLayout from '../templates/MainLayout';

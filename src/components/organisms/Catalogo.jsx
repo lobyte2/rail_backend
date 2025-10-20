@@ -1,4 +1,3 @@
-// src/components/organisms/Catalogo.jsx
 import Producto from '../molecules/Producto';
 import './Catalogo.css';
 

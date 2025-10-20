@@ -1,4 +1,3 @@
-// src/components/2-molecules/ProductCard.jsx
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import Heading from '../atoms/Heading';
@@ -7,7 +6,6 @@ import Text from '../atoms/Text';
 import Button from '../atoms/Button';
 import { CartContext } from '../../context/CartContext';
 import './producto.css';
-// --- CAMBIO 1: Importamos tu función 'money' (asumiendo que está en 'utils/formatPrice.js') ---
 import { money } from '../../utils/formatPrice';
 
 const ProductCard = ({ product }) => {
@@ -20,7 +18,6 @@ const ProductCard = ({ product }) => {
         <Heading level={3}>{product.name}</Heading>
       </Link>
       
-      {/* --- CAMBIO 2: Usamos tu función 'money' en lugar de .toFixed(2) --- */}
       <Text className="product-card-price">{money(product.price)}</Text>
       
       <Button variant="primary" onClick={() => addToCart(product)}>

@@ -1,4 +1,3 @@
-// src/components/pages/InicioPage.jsx
 import { useState, useEffect } from 'react';
 import MainLayout from '../templates/MainLayout';
 import Heading from '../atoms/Heading';
@@ -10,7 +9,7 @@ const InicioPage = () => {
   const [featuredProducts, setFeaturedProducts] = useState([]);
 
   useEffect(() => {
-    // Obtenemos todos los productos y mostramos solo los primeros 4 como "destacados"
+
     getProducts().then(allProducts => {
       setFeaturedProducts(allProducts.slice(0, 4));
     });

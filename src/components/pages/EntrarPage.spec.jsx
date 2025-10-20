@@ -1,5 +1,3 @@
-// src/components/pages/EntrarPage.spec.jsx
-
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -8,24 +6,24 @@ import { vi } from 'vitest';
 
 import EntrarPage from './EntrarPage.jsx';
 import { AuthContext } from '../../context/AuthContext.jsx';
-// --- CAMBIO 1: Importar el CartContext ---
+
 import { CartContext } from '../../context/CartContext.jsx'; 
 
-// Mock simple de la API
+
 vi.mock('../../api/db.js', () => ({
   loginUser: vi.fn(),
 }));
 
-// --- CAMBIO 2: Actualizar la función renderLoginPage ---
+
 const renderLoginPage = () => {
     const loginSpy = vi.fn();
-    // Agregamos un valor simulado para el CartContext
+
     const cartContextValue = { cart: [] }; 
 
     return render(
         <BrowserRouter>
             <AuthContext.Provider value={{ login: loginSpy }}>
-                {/* Envolvemos la página con el CartContext que faltaba */}
+
                 <CartContext.Provider value={cartContextValue}>
                     <EntrarPage />
                 </CartContext.Provider>
@@ -36,7 +34,7 @@ const renderLoginPage = () => {
 
 describe('Componente EntrarPage', () => {
 
-    // --- Prueba 8: Estado (Manejo de inputs) ---
+
     it('debería actualizar el estado al escribir en los inputs', () => {
         renderLoginPage();
         
@@ -50,7 +48,7 @@ describe('Componente EntrarPage', () => {
         expect(passwordInput.value).toBe('pass123');
     });
 
-    // --- Prueba 9: Renderizado Condicional (Error) ---
+
     it('debería mostrar un enlace para registrarse', () => {
         renderLoginPage();
 

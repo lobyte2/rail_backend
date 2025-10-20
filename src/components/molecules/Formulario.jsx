@@ -1,4 +1,3 @@
-// src/components/2-molecules/FormField.jsx
 import Label from '../atoms/Label';
 import Input from '../atoms/Input';
 

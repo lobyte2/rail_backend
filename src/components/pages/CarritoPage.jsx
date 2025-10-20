@@ -1,4 +1,3 @@
-// src/components/pages/CarritoPage.jsx
 import { useContext } from 'react';
 import MainLayout from '../templates/MainLayout';
 import { CartContext } from '../../context/CartContext';
@@ -7,7 +6,6 @@ import Button from '../atoms/Button';
 import Text from '../atoms/Text';
 import Image from '../atoms/Image';
 import { Link } from 'react-router-dom';
-// --- CAMBIO 1: Importamos tu función 'money' (asumiendo que está en 'utils/formatPrice.js') ---
 import { money } from '../../utils/formatPrice';
 
 const CarritoPage = () => {
@@ -32,7 +30,7 @@ const CarritoPage = () => {
                             <Heading level={4}>{item.name}</Heading>
                             <Text>Cantidad: {item.quantity}</Text>
                             
-                            {/* --- CAMBIO 2: Usamos tu función 'money' aquí --- */}
+
                             <Text>{money(item.price * item.quantity)}</Text>
                             
                             <Button variant="secondary" onClick={() => removeFromCart(item.id)}>Eliminar</Button>
@@ -40,7 +38,7 @@ const CarritoPage = () => {
                     ))}
                     <Heading level={2} style={{ textAlign: 'right', marginTop: '20px' }}>
                         
-                        {/* --- CAMBIO 3: Y usamos tu función 'money' aquí --- */}
+
                         Total: {money(total)}
                     </Heading>
                 </div>

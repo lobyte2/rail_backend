@@ -1,4 +1,3 @@
-// src/components/pages/ProductoDetallePage.jsx
 import { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import MainLayout from '../templates/MainLayout';
@@ -8,11 +7,11 @@ import Image from '../atoms/Image';
 import Text from '../atoms/Text';
 import Button from '../atoms/Button';
 import { CartContext } from '../../context/CartContext';
-// --- CAMBIO 1: Importamos tu función 'money' (asumiendo que está en 'utils/formatPrice.js') ---
+
 import { money } from '../../utils/formatPrice';
 
 const ProductoDetallePage = () => {
-    const { id } = useParams(); // Obtiene el ID del producto de la URL
+    const { id } = useParams(); 
     const [product, setProduct] = useState(null);
     const { addToCart } = useContext(CartContext);
 

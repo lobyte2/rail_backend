@@ -1,4 +1,3 @@
-// src/components/pages/AdminPage.jsx
 import { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import MainLayout from '../templates/MainLayout';
@@ -13,13 +12,13 @@ const AdminPage = () => {
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
 
-    // Estados para la gestión de usuarios
+
     const [users, setUsers] = useState([]);
     const [newUserEmail, setNewUserEmail] = useState('');
     const [newUserPassword, setNewUserPassword] = useState('');
     const [userError, setUserError] = useState('');
 
-    // --- Estados para la gestión de productos ---
+
     const [products, setProducts] = useState([]);
     const [newProductName, setNewProductName] = useState('');
     const [newProductPrice, setNewProductPrice] = useState('');
@@ -28,19 +27,19 @@ const AdminPage = () => {
     const [productError, setProductError] = useState('');
 
     useEffect(() => {
-        // Protección de la ruta
+
         if (!user || user.role !== 'admin') {
             navigate('/login');
             return;
         }
 
-        // Cargar datos iniciales
+
         getUsers().then(setUsers);
         getProducts().then(setProducts);
 
     }, [user, navigate]);
 
-    // --- Lógica para Usuarios (se mantiene igual) ---
+
     const handleDeleteUser = async (userId) => {
         if (userId === user.id) {
             alert('No puedes eliminarte a ti mismo.');
@@ -63,7 +62,7 @@ const AdminPage = () => {
         }
     };
 
-    // --- Lógica para Productos ---
+
     const handleAddProduct = async (e) => {
         e.preventDefault();
         setProductError('');
@@ -83,7 +82,7 @@ const AdminPage = () => {
             const updatedProducts = await addProduct(productData);
             setProducts(updatedProducts);
 
-            // Limpiar el formulario
+
             setNewProductName('');
             setNewProductPrice('');
             setNewProductImage('');
@@ -99,11 +98,11 @@ const AdminPage = () => {
         <MainLayout>
             <Heading level={1} style={{ textAlign: 'center' }}>Panel de Administración</Heading>
 
-            {/* --- Sección de Productos --- */}
+
             <div style={{ background: '#f9f9f9', padding: '20px', borderRadius: '8px', marginBottom: '30px' }}>
                 <Heading level={2}>Administrar Productos</Heading>
                 
-                {/* Formulario para agregar productos */}
+
                 <form onSubmit={handleAddProduct} style={{ marginBottom: '20px' }}>
                     <Heading level={3}>Agregar Nuevo Producto</Heading>
                     <Formulario label="Nombre del Producto" type="text" value={newProductName} onChange={e => setNewProductName(e.target.value)} />
@@ -114,7 +113,7 @@ const AdminPage = () => {
                     <Button type="submit">Agregar Producto</Button>
                 </form>
 
-                {/* Lista de productos actuales */}
+
                 <Heading level={3}>Lista de Productos</Heading>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                     {products.map(p => (
@@ -126,7 +125,7 @@ const AdminPage = () => {
             </div>
 
 
-            {/* --- Sección de Usuarios (se mantiene igual) --- */}
+
             <div style={{ background: '#f9f9f9', padding: '20px', borderRadius: '8px' }}>
                 <Heading level={2}>Administrar Usuarios</Heading>
                 <form onSubmit={handleAddUser} style={{ marginBottom: '20px' }}>

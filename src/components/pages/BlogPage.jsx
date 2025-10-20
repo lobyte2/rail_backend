@@ -1,4 +1,3 @@
-// src/components/pages/BlogPage.jsx
 import MainLayout from '../templates/MainLayout';
 import Heading from '../atoms/Heading';
 import Text from '../atoms/Text';
@@ -25,7 +24,7 @@ const BlogPage = () => {
             <div style={{ maxWidth: '800px', margin: '40px auto' }}>
                 <Heading level={1} style={{ textAlign: 'center', marginBottom: '40px' }}>Blog</Heading>
 
-                {/* Sección de Novedades */}
+
                 <div style={sectionStyle}>
                     <Heading level={2}>Novedades de la tienda</Heading>
                     <Text>
@@ -38,7 +37,7 @@ const BlogPage = () => {
                     />
                 </div>
 
-                {/* Sección de Datos Curiosos */}
+
                 <div style={sectionStyle}>
                     <Heading level={2}>Datos curiosos</Heading>
                     
