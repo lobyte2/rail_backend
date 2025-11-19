@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect, useContext } from 'react';
-import { getCart, addToCartApi, removeFromCartApi } from '../api/db';
+import { getCart, addToCartApi, removeFromCartApi, checkoutCart } from '../api/db';//Agregamos 'checkoutCart' aquí abajo
 import { AuthContext } from './AuthContext';
 
 export const CartContext = createContext();
@@ -47,8 +47,22 @@ export const CartProvider = ({ children }) => {
         }
     };
 
+    // Pagar / Vaciar Carrito 
+    const pagar = async () => {
+        if (!isAuthenticated) return;
+        try {
+            await checkoutCart(); // Llama al backend
+            setCart([]); // Limpia el estado visual
+            alert("¡Compra realizada con éxito!");
+        } catch (error) {
+            console.error("Error al pagar:", error.message);
+            alert("Hubo un error al procesar tu compra.");
+        }
+    };
+
     return (
-        <CartContext.Provider value={{ cart, addToCart, removeFromCart, loadingCart: loading }}>
+        // Agregamos 'pagar' al value del provider
+        <CartContext.Provider value={{ cart, addToCart, removeFromCart, pagar, loadingCart: loading }}>
             {children}
         </CartContext.Provider>
     );

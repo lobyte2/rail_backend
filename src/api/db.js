@@ -24,7 +24,7 @@ const getAuthHeaders = () => {
             headers['x-user-id'] = user.id;
         }
     } catch (e) {
-        // No hacer nada si falla, solo no se manda el header
+        // No hacer nada si falla
     }
     return headers;
 };
@@ -44,6 +44,22 @@ export const addProduct = (productData) => {
         method: 'POST',
         headers: getAuthHeaders(),
         body: JSON.stringify(productData),
+    }).then(handleResponse);
+};
+
+// Nuevas funciones: Editar y Eliminar Producto
+export const updateProduct = (id, productData) => {
+    return fetch(`${API_URL}/products/${id}`, {
+        method: 'PUT',
+        headers: getAuthHeaders(),
+        body: JSON.stringify(productData),
+    }).then(handleResponse);
+};
+
+export const deleteProduct = (id) => {
+    return fetch(`${API_URL}/products/${id}`, {
+        method: 'DELETE',
+        headers: getAuthHeaders(),
     }).then(handleResponse);
 };
 
@@ -92,34 +108,41 @@ export const addUser = ({ email, password }) => {
 
 export const getCart = () => {
     return fetch(`${API_URL}/cart`, {
-        headers: getAuthHeaders() // Obligatorio
+        headers: getAuthHeaders()
     }).then(handleResponse);
 };
 
 export const addToCartApi = (product) => {
-    return fetch(`${API_URL}/cart/itemlo`, { // Endpoint del backend
+    return fetch(`${API_URL}/cart/itemlo`, {
         method: 'POST',
-        headers: getAuthHeaders(), // Obligatorio
+        headers: getAuthHeaders(),
         body: JSON.stringify(product)
     }).then(handleResponse);
 };
 
 export const removeFromCartApi = (productId) => {
-    return fetch(`${API_URL}/cart/itemlo/${productId}`, { // Endpoint del backend
+    return fetch(`${API_URL}/cart/itemlo/${productId}`, {
         method: 'DELETE',
-        headers: getAuthHeaders() // Obligatorio
+        headers: getAuthHeaders()
+    }).then(handleResponse);
+};
+
+// Nueva función: Finalizar Compra
+export const checkoutCart = () => {
+    return fetch(`${API_URL}/cart/checkout`, {
+        method: 'POST',
+        headers: getAuthHeaders(),
     }).then(handleResponse);
 };
 
 // --- Blog (blog-service) ---
 
 export const getBlogPosts = () => {
-    return fetch(`${API_URL}/blog/posteos`).then(handleResponse); // Endpoint del backend
+    return fetch(`${API_URL}/blog/posteos`).then(handleResponse);
 };
 
 // --- Utilidad (Local) ---
 
-// Dejo esta función porque la sigo usando en el frontend
 export function money(x) {
   return Intl.NumberFormat("es-CL", { 
     style: "currency", 

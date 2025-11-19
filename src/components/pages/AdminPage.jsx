@@ -6,7 +6,8 @@ import Button from '../atoms/Button';
 import Formulario from '../molecules/Formulario';
 import Text from '../atoms/Text';
 import { AuthContext } from '../../context/AuthContext';
-import { getUsers, deleteUser, addUser, getProducts, addProduct } from '../../api/db';
+// Agregamos deleteProduct a las importaciones
+import { getUsers, deleteUser, addUser, getProducts, addProduct, deleteProduct } from '../../api/db';
 
 const AdminPage = () => {
     const { user } = useContext(AuthContext);
@@ -62,6 +63,20 @@ const AdminPage = () => {
         }
     };
 
+    // --- Función nueva para eliminar productos ---
+    const handleDeleteProduct = async (productId) => {
+        if(!window.confirm("¿Estás seguro de eliminar este producto?")) return;
+
+        try {
+            await deleteProduct(productId);
+            // Recargamos la lista de productos desde el servidor
+            const updatedProducts = await getProducts();
+            setProducts(updatedProducts);
+        } catch (err) {
+            alert("Error al eliminar: " + err);
+        }
+    };
+
 
     const handleAddProduct = async (e) => {
         e.preventDefault();
@@ -79,7 +94,10 @@ const AdminPage = () => {
                 image: newProductImage,
                 description: newProductDesc
             };
-            const updatedProducts = await addProduct(productData);
+            await addProduct(productData);
+            
+            // Recargamos la lista actualizada
+            const updatedProducts = await getProducts();
             setProducts(updatedProducts);
 
 
@@ -117,8 +135,11 @@ const AdminPage = () => {
                 <Heading level={3}>Lista de Productos</Heading>
                 <ul style={{ listStyle: 'none', padding: 0 }}>
                     {products.map(p => (
-                        <li key={p.id} style={{ background: 'white', padding: '10px', borderRadius: '4px', marginBottom: '5px' }}>
-                            {p.name}
+                        <li key={p.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'white', padding: '10px', borderRadius: '4px', marginBottom: '5px' }}>
+                            {/* Mostramos nombre y precio */}
+                            <span>{p.name} - ${p.price}</span>
+                            {/* Botón para eliminar el producto */}
+                            <Button onClick={() => handleDeleteProduct(p.id)} variant="danger">Eliminar</Button>
                         </li>
                     ))}
                 </ul>
