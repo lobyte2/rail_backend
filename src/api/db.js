@@ -32,7 +32,7 @@ const getAuthHeaders = () => {
 // --- Productos (product-service) ---
 
 export const getProducts = () => {
-    return fetch(`${API_URL}/products`).then(handleResponse);
+    return fetch(`${API_URL}/products`).then(handleResponse); // Llama a http://localhost:3000/api/products
 };
 
 export const getProductById = (id) => {
@@ -66,19 +66,11 @@ export const deleteProduct = (id) => {
 // --- Login / Registro (login-service) ---
 
 export const loginUser = ({ email, password }) => {
-    return fetch(`${API_URL}/login/login`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
-    }).then(handleResponse);
+    return fetch(`${API_URL}/login/login`, { /* ... */ }); // Esto construye: http://localhost:3000/api/login/login
 };
 
 export const registerUser = (userData) => {
-    return fetch(`${API_URL}/login/register`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(userData),
-    }).then(handleResponse);
+    return fetch(`${API_URL}/login/register`, { /* ... */ }); // Esto construye: http://localhost:3000/api/login/register
 };
 
 // --- Admin Usuarios (user-service) ---
