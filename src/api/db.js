@@ -1,5 +1,11 @@
 // La URL de mi portal (Gateway)
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+// =========================================================================
+// CORRECCIÓN CRÍTICA: Se reemplaza el fallback 'http://localhost:3000/api'
+// por la URL pública del Gateway de Render, asegurando que la conexión
+// siempre sea correcta incluso si Vercel no inyecta la variable VITE_API_URL.
+// ¡DEBES REEMPLAZAR LA URL DEL EJEMPLO CON TU URL REAL DE RENDER!
+// =========================================================================
+const API_URL = import.meta.env.VITE_API_URL || 'https://perifericos-gateway.onrender.com'; // <--- ¡CAMBIA ESTA URL!
 
 // --- Helpers ---
 
@@ -7,6 +13,7 @@ const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
 const handleResponse = async (response) => {
     const data = await response.json();
     if (!response.ok) {
+        // En caso de error, el cuerpo (data) contiene el mensaje
         throw (data.message || data || 'Error desconocido del servidor');
     }
     return data;
@@ -21,7 +28,8 @@ const getAuthHeaders = () => {
         const storedUser = localStorage.getItem('user');
         if (storedUser) {
             const user = JSON.parse(storedUser);
-            headers['x-user-id'] = user.id;
+            // Asumiendo que el ID del usuario se usa como 'x-user-id'
+            headers['x-user-id'] = user.id; 
         }
     } catch (e) {
         // No hacer nada si falla
@@ -32,7 +40,7 @@ const getAuthHeaders = () => {
 // --- Productos (product-service) ---
 
 export const getProducts = () => {
-    return fetch(`${API_URL}/products`).then(handleResponse); // Llama a http://localhost:3000/api/products
+    return fetch(`${API_URL}/products`).then(handleResponse);
 };
 
 export const getProductById = (id) => {
@@ -66,11 +74,19 @@ export const deleteProduct = (id) => {
 // --- Login / Registro (login-service) ---
 
 export const loginUser = ({ email, password }) => {
-    return fetch(`${API_URL}/login/login`, { /* ... */ }); // Esto construye: http://localhost:3000/api/login/login
+    return fetch(`${API_URL}/login/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+    }).then(handleResponse);
 };
 
 export const registerUser = (userData) => {
-    return fetch(`${API_URL}/login/register`, { /* ... */ }); // Esto construye: http://localhost:3000/api/login/register
+    return fetch(`${API_URL}/login/register`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(userData),
+    }).then(handleResponse);
 };
 
 // --- Admin Usuarios (user-service) ---
@@ -132,13 +148,3 @@ export const checkoutCart = () => {
 export const getBlogPosts = () => {
     return fetch(`${API_URL}/blog/posteos`).then(handleResponse);
 };
-
-// --- Utilidad (Local) ---
-
-export function money(x) {
-  return Intl.NumberFormat("es-CL", { 
-    style: "currency", 
-    currency: "CLP",
-    minimumFractionDigits: 0
-  }).format(x);
-}
