@@ -5,7 +5,7 @@
 // siempre sea correcta incluso si Vercel no inyecta la variable VITE_API_URL.
 // ¡DEBES REEMPLAZAR LA URL DEL EJEMPLO CON TU URL REAL DE RENDER!
 // =========================================================================
-const API_URL = import.meta.env.VITE_API_URL || 'https://perifericos-gateway.onrender.com'; // <--- ¡CAMBIA ESTA URL!
+const API_URL = 'https://perifericos-gateway.onrender.com'; // <--- ¡CAMBIA ESTA URL!
 
 // --- Helpers ---
 
