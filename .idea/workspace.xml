@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb397a7f-9314-4655-8189-a867ead945af" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="bb397a7f-9314-4655-8189-a867ead945af" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,12 +31,12 @@
     &quot;assignee&quot;: &quot;Rodrigoruiz12&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/lobyte2/perifericos_front-back.git&quot;,
-    &quot;accountId&quot;: &quot;5821b306-0d47-42f1-8bf6-dd231ff647c1&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/lobyte2/rail_backend",
+    "accountId": "5821b306-0d47-42f1-8bf6-dd231ff647c1"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
@@ -85,12 +83,16 @@
       <workItem from="1763586366916" duration="3454000" />
       <workItem from="1763761013443" duration="5717000" />
       <workItem from="1764032769834" duration="631000" />
-      <workItem from="1764189493211" duration="833000" />
+      <workItem from="1764189493211" duration="1154000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="conectando a supabase" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
