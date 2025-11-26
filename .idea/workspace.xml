@@ -33,7 +33,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/lobyte2/rail_backend",
+    "url": "https://github.com/lobyte2/rail_front",
     "accountId": "5821b306-0d47-42f1-8bf6-dd231ff647c1"
   }
 }]]></component>
@@ -83,7 +83,7 @@
       <workItem from="1763586366916" duration="3454000" />
       <workItem from="1763761013443" duration="5717000" />
       <workItem from="1764032769834" duration="631000" />
-      <workItem from="1764189493211" duration="1154000" />
+      <workItem from="1764189493211" duration="1506000" />
     </task>
     <servers />
   </component>
@@ -92,6 +92,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="conectando a supabase" />
+    <MESSAGE value="Nuevo repo para el backend" />
     <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="github-copilot-workspace">
