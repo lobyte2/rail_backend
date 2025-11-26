@@ -5,42 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb397a7f-9314-4655-8189-a867ead945af" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blog-service/data/supabase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cart-service/data/supabase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login-service/data/supabase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-service/data/supabase.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/data/supabase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-service/controllers/blog.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-service/controllers/blog.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-service/data/db.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-service/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog-service/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-service/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog-service/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-service/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog-service/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-service/services/blog.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-service/services/blog.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/controllers/cart.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/controllers/cart.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/data/db.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/services/cart.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/services/cart.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-service/controllers/login.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/login-service/controllers/login.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-service/data/db.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-service/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/login-service/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-service/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/login-service/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-service/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/login-service/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login-service/services/login.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/login-service/services/login.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/controllers/product.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/controllers/product.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/data/db.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/services/product.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/services/product.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/controllers/user.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/data/db.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/services/user.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +20,25 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Rodrigoruiz12&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/lobyte2/perifericos_front-back.git&quot;,
+    &quot;accountId&quot;: &quot;5821b306-0d47-42f1-8bf6-dd231ff647c1&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
@@ -66,27 +48,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Node.js.blog.service.js.executor": "Run",
-    "Node.js.server.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.blog.service.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.server.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;back&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
-        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
       </set>
     </attachedChunks>
   </component>
@@ -99,10 +84,20 @@
       <updated>1763586365368</updated>
       <workItem from="1763586366916" duration="3454000" />
       <workItem from="1763761013443" duration="5717000" />
+      <workItem from="1764032769834" duration="631000" />
+      <workItem from="1764189493211" duration="833000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>
