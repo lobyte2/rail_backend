@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -22,3 +23,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+=======
+# Archivos de la IDE (IntelliJ IDEA)
+.idea/
+*.iml
+# Ignorar dependencias de Node
+/node_modules
+>>>>>>> 5bc078c5ed1cd0c69251b800723e16c9039616ee

@@ -1,0 +1,14 @@
+{
+  "name": "cart-service",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch server.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.84.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
